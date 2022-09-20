@@ -1,0 +1,14 @@
+.sombrero {
+    width: 18rem;
+    height: auto;
+}
+
+.sombrero:hover {
+    width: 22rem;
+    height: auto;
+    
+}
+
+.div-nuestros-productos {
+    height: 35rem;
+}

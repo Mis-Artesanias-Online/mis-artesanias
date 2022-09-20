@@ -1,0 +1,26 @@
+.navbar-artesanias{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 0 5rem 0 0;
+    
+}
+
+.img-nav {
+    width: 5rem;
+}
+
+.nav.navbar {
+    padding: 0;
+}
+
+a{
+    margin: 1.5rem;
+    font-size: 1.3rem;
+}
+
+ion-icon{
+    font-size: 2rem;
+    margin-left: 0.5rem;
+}

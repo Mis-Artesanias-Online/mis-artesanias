@@ -1,0 +1,44 @@
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../asssets/images/fondo-banner.jpeg");
+    /* Used if the image is unavailable */
+    height: 38rem;
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    text-align: center;
+
+
+}
+
+.banner-container {
+    display: inline-block;
+    align-items: center;
+}
+
+.text {
+
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold 700;
+    transform: center;
+}
+
+.text1 {
+    color: #fff;
+    font-size: 0.5em;
+    font-weight: bold;
+    transform: center;
+    position: relative;
+    bottom: -200px;
+}
+
+.title-site {
+    font-size: 4rem;
+    text-shadow: 0.1em 0.1em 0.2em white;
+    margin-top: 10rem;
+}
+

@@ -1,0 +1,58 @@
+.input-form {
+    width: 35rem;
+    height: 3rem;
+}
+
+.button-login{
+    color: #FFFFFF;
+    width: 15em;
+    height: 2.5em;
+    border:solid;
+    background: #000000;
+}
+
+.button-login-animation {
+    color: #fff;
+	cursor: pointer;
+	display: inline;
+	position: relative;
+	border: 2px solid #000000;
+	transition: all 0.6s cubic-bezier(0.42, 0, 0.58, 1)0s;
+}
+
+.button-login-animation:hover {
+	color: #fff !important;
+	background-color: transparent;
+	text-shadow: nthree;
+}
+.button-login-animation:hover:before {
+	left: 0%;
+	right: auto;
+	width: 100%;
+}
+.button-login-animation:before {
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 0px;
+	z-index: -1;
+	content: '';
+	color: #333 !important;
+	background: #000000;
+	transition: all 0.6s cubic-bezier(0.42, 0, 0.58, 1)0s;
+}
+
+.style-title {
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-google{
+    width: 2rem;
+}
