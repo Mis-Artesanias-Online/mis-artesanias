@@ -6,7 +6,7 @@ const VITE_API_ENDPOINT = import.meta.env.VITE_API_ENDPOINT;
 
 // VITE_API_KEY => REQUIRED
 export const getUsersPaginated = async (from = null, limit = null) => {
-  var config = {
+  let config = {
     method: "get",
     url: `${VITE_API_ENDPOINT}/users?from=${from}&limit=${limit}`,
     headers: {
@@ -16,7 +16,7 @@ export const getUsersPaginated = async (from = null, limit = null) => {
 
   axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(response.data));
+      console.log(response.data);
       return response.data;
     })
     .catch(function (error) {
@@ -33,7 +33,7 @@ export const createUser = async (name, email, password) => {
     role: "USER_ROLE",
   };
 
-  var config = {
+  let config = {
     method: "post",
     url: `${VITE_API_ENDPOINT}/users`,
     headers: {
@@ -43,7 +43,7 @@ export const createUser = async (name, email, password) => {
   };
   axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(response.data));
+      console.log(response.data);
       return response.data;
     })
     .catch(function (error) {
@@ -59,7 +59,7 @@ export const updatedUser = async (userID, name, email, password) => {
     password,
     role: "USER_ROLE",
   };
-  var config = {
+  let config = {
     method: "put",
     url: `${VITE_API_ENDPOINT}/users/${userID}`,
     headers: {
@@ -80,7 +80,7 @@ export const updatedUser = async (userID, name, email, password) => {
 
 // VITE_ADMIN_KEY AND JWT => REQUIRED
 export const deleteUser = async (userID) => {
-  var config = {
+  let config = {
     method: "put",
     url: `${VITE_API_ENDPOINT}/users/${userID}`,
     headers: {
@@ -106,7 +106,7 @@ export const loginUser = (email, password) => {
     password,
   };
 
-  var config = {
+  let config = {
     method: "post",
     url: `${VITE_API_ENDPOINT}/auth/login`,
     headers: {
