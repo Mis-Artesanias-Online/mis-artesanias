@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
 
 import { loginUser } from "../../api/users/users";
+import { getItem } from "../../lib/sessionStorage";
 /* import { GoogleLogin } from "react-google-login"; */
 
 export const Login = () => {
@@ -21,14 +22,16 @@ export const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
     loginUser(formState.email, formState.password);
+    if (getItem("x-jwt")) {
+      window.location.href = "/";
+    }
   };
 
   return (
     <div className="container">
-      <h1 className="style-title">
-        <b>Iniciar Sesión</b>
-      </h1>
+      <h1 className="style-title">"Login"</h1>
       {
         <Row className="w-100">
           <Col xl={8}>
