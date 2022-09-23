@@ -13,7 +13,7 @@ export const NavArtesanias = () => {
           <img className="img-nav" src={logotitulo} alt="logo-artesanias"/>
 
           <div className="menu-container">
-            <Link to="/"><a>Inicio</a></Link>
+            <Link to="/">Inicio</Link>
             
             <a>Productos</a>
           </div>

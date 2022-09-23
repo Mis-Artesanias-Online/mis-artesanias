@@ -5,8 +5,8 @@ import '../../styles/Login.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from "react-router-dom";
-/* import { GoogleLogin } from "react-google-login";
-import * as dotenv from 'dotenv';
+/* import { GoogleLogin } from "react-google-login"; */
+/* import * as dotenv from 'dotenv';
 dotenv.config() */
 
 export const Login = () => {
@@ -18,10 +18,10 @@ export const Login = () => {
         role: 'USER_ROLE',
     });
 
-    const resGoogle = (res) => {
+    /* const resGoogle = (res) => {
         console.log(res);
         console.log(res.profileObj);
-    }
+    } */
 
     async function postUser() {
         try {
@@ -82,23 +82,20 @@ export const Login = () => {
                                 </Link>
 
                             </div>
-
-
                         </div>
-
                     </Col>
 
-                    <Col xl={4}>
+                    {/* <Col xl={4}>
                         <h1 className="mb-4"><b>También con: </b></h1>
-                        {/* <GoogleLogin
+                        <GoogleLogin
                             clientId="g_id_onload"
                             data-client_id={process.env.GOOGLE_CLIENT_ID}
                             buttonText="Iniciar Sesión con Google"
                             onSuccess={resGoogle}
                             onFailure={resGoogle}
                             cookiePolicy={"single_host_origin"}
-                        /> */}
-                    </Col>
+                        />
+                    </Col> */}
                 </Row>
             }
         </div>
