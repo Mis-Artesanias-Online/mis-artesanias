@@ -1,27 +1,23 @@
 import axios from "axios";
 import { useState } from "react";
-const API = 'https://super-cafe.herokuapp.com/api/users';
 import icongoogle from '../../asssets/icons/icongoogle.png';
 import '../../styles/Login.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import {createUser} from "../../api/users/users.js";
 
 export const Register = () => {
     const [formState, setFormState] = useState({
-
         email: '',
         password: '',
         name: '',
         role: 'USER_ROLE',
     });
 
-    async function postUser() {
-        try {
-            const response = await axios.post(API, formState);
-            console.log(response.data);
-        } catch (error) {
-            console.error(error);
-        }
+    const handleRegister = async (e) => {
+        e.preventDefault()
+
+        await createUser(formState.name, formState.email, formState.password)
     }
 
     return (
@@ -71,7 +67,7 @@ export const Register = () => {
 
                             <button
                                 className="button-login button-login-animation mt-3 mb-3"
-                                onClick={postUser}>Registrarse
+                                onClick={handleRegister}>Registrarse
                                 
                             </button>
                         </div>

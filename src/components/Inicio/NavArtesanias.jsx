@@ -1,11 +1,16 @@
-import { useEffect } from 'react';
+import {useEffect, useState} from 'react';
 import logotitulo from '../../asssets/icons/logotitulo.png';
 import '../../styles/NavArtesanias.css';
 import { Link } from 'react-router-dom';
+import {getItem} from "../../lib/sessionStorage.js";
 
 export const NavArtesanias = () => {
+  const [name, setName] = useState("")
 
-  useEffect(() => { }, [])
+  useEffect(() => {
+    setName(getItem("name"))
+  }, [name])
+
   return (
     <header className="navbar-container m-3">
       <nav className="navbar-artesanias">
@@ -18,8 +23,10 @@ export const NavArtesanias = () => {
         </div>
 
         <div>
+
           <Link to="/Login">
             <ion-icon name="person-outline"></ion-icon>
+            {name}
           </Link>
 
           <ion-icon name="cart-outline"></ion-icon>
