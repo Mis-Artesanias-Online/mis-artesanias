@@ -117,9 +117,17 @@ export const loginUser = (email, password) => {
 
   axios(config)
     .then(function (response) {
-      console.log(response.data);
+      // console.log({
+      //   name: response.data.user.name,
+      //   token: response.data.token
+      // });
       saveItem("x-jwt", response.data.token);
-      return "OK"; // Thats means: User logged in and token saved on sessionstorage
+      saveItem("name", response.data.user.name);
+      window.location.pathname = "/"
+      return ({
+        name: response.data.user.name,
+        token: response.data.token
+      }); // Thats means: User logged in and token saved on sessionstorage
     })
     .catch(function (error) {
       console.log(error.request.response);
