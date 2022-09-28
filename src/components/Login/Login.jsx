@@ -71,9 +71,8 @@ export const Login = () => {
 
                 
                 <button className="button-login-right button-login-animation mt-3 mb-3">
-                    <Link className="link-register" to="/Register">
-                      Registrarse
-                    </Link>
+                    <Link className="link-register" to="/Register"></Link>
+                    Registrarse
                 </button>
                 
               </div>

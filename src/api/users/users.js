@@ -122,6 +122,6 @@ export const loginUser = (email, password) => {
       return "OK"; // Thats means: User logged in and token saved on sessionstorage
     })
     .catch(function (error) {
-      console.log(error);
+      console.log(error.request.response);
     });
 };

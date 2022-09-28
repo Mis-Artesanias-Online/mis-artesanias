@@ -30,7 +30,7 @@ export const Register = () => {
             <h1 className="style-title"><b>Registrate</b></h1>
             {
                 <Row className="w-100">
-                    <Col xl={8}>
+                    <Col xl={12} className="d-flex justify-content-center align-item-center">
                         <div className="d-grid">
                             <label><b>Nombre:</b></label>
                             <input
@@ -68,19 +68,14 @@ export const Register = () => {
                                 type='password'
                                 placeholder='Tu contraseña'
                             />
-
-                            <button
-                                className="button-login button-login-animation mt-3 mb-3"
-                                onClick={postUser}>Registrarse
-                                
-                            </button>
+                            <div>
+                                <button
+                                    className="button-login button-login-animation mt-3 mb-3"
+                                    onClick={postUser}>Registrarse
+                                </button>
+                            </div>
+                            
                         </div>
-
-                    </Col>
-
-                    <Col xl={4}>
-                        <h1 className="mb-4"><b>También con: </b></h1>
-                        <button className="loginButtonGoogle d-flex justify-content-center align-item-center">GOOGLE <img className="icon-google" src={icongoogle}/></button>
 
                     </Col>
                 </Row>
