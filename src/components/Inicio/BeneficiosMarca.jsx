@@ -9,45 +9,38 @@ import vip from '../../asssets/icons/vip.png';
 
 export const BeneficiosMarca = () => {
     return (
-        <>
+        <div className="w-100 h-auto">
             <h1 className="d-flex align-center justify-content-center mt-5">Nuestros Beneficios</h1>
 
             {
-                <Row className="d-flex justify-content-center w-100 mb-5 mt-5">
-                    <Col xl={3} md={6}>
-                        <div className="d-block text-center">
-                            <img className="icon-div mb-3" src={colombia} alt="Envios Nacionales"/>
-                            <h2>Envios Nacionales</h2>
-                            <p>Envios a todo el territorio nacional</p>
-                        </div>
+                <Row className="d-flex justify-content-center w-100 h-auto mb-5 mt-5">
+                    <Col xl={3} md={6} className="d-block text-center">
+                        <img className="icon-div mb-3" src={colombia} alt="Envios Nacionales" />
+                        <h2>Envios Nacionales</h2>
+                        <p>Envios a todo el territorio nacional</p>
                     </Col>
-                    <Col xl={3} md={6}>
-                        <div className="d-block text-center">
-                            <img className="icon-div mb-3" src={vip} alt="Productos Exclusivos"/>
-                            <h2>Productos Exclusivos</h2>
-                            <p>Productos 100% exclusivos</p>
-                        </div>
-                        
+                    
+                    <Col xl={3} md={6} className="d-block text-center">
+                        <img className="icon-div mb-3" src={vip} alt="Productos Exclusivos" />
+                        <h2>Productos Exclusivos</h2>
+                        <p>Productos 100% exclusivos</p>
                     </Col>
-                    <Col xl={3} md={6}>
-                        <div className="d-block text-center">
-                            <img className="icon-div mb-3" src={certificacion} alt="Productos Certificados"/>
-                            <h2>Productos Garantizados</h2>
-                            <p>Todos nuestros productos son de alta calidad</p>
-                        </div>
-                        
+
+                    <Col xl={3} md={6} className="d-block text-center">
+                        <img className="icon-div mb-3" src={certificacion} alt="Productos Certificados" />
+                        <h2>Productos Garantizados</h2>
+                        <p>Todos nuestros productos son de alta calidad</p>
                     </Col>
-                    <Col xl={3} md={6}>
-                        <div className="d-block text-center">
-                            <img className="icon-div mb-3" src={bloquear} alt="Pagos Seguros"/>
-                            <h2>Pagos Seguros</h2>
-                            <p>Plataforma de pago segura</p>
-                        </div>
+
+                    <Col xl={3} md={6} className="d-block text-center">
+                        <img className="icon-div mb-3" src={bloquear} alt="Pagos Seguros" />
+                        <h2>Pagos Seguros</h2>
+                        <p>Plataforma de pago segura</p>
                     </Col>
                 </Row>
             }
 
-        </>
+        </div>
 
     )
 }

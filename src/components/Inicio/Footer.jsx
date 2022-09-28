@@ -8,7 +8,7 @@ import twitter from '../../asssets/icons/twitter.svg';
 export const Footer = () => {
 
     return (
-        <div className='footer w-100'>
+        <footer className='footer w-100'>
             <img className='logoFooter' src={logotitulo} alt="" />
             <div className='footerI'>
                 <a href="">Informacion</a>
@@ -22,7 +22,7 @@ export const Footer = () => {
                 <a href=""> <img className='logos' src={twitter} alt="" /></a>
                 <a href=""> <img className='logos' src={red} alt="" /> </a>
             </div>
-            <div><p>© 2022 Mís Artesanías. All rights reserved</p></div>
-        </div>
+            <div><p className="m-0">© 2022 Mís Artesanías. All rights reserved</p></div>
+        </footer>
     )
 }

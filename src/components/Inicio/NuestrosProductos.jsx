@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import sombrero1 from '../../asssets/products/sombrero1.jpg';
 import sombrero2 from '../../asssets/products/sombrero2.jpg';
 import sombrero3 from '../../asssets/products/sombrero3.jpg';
+import { CardArt } from "../../components/Inicio/CardArt";
 
 
 export const NuestrosProductos = () => {
@@ -14,26 +15,26 @@ export const NuestrosProductos = () => {
             {
                 <Row className="w-100">
                     <Col xl={4} md={6} className="d-flex align-center justify-content-center">
-                        <div className="d-block text-center">
-                            <h2>Sombrero Tradicional</h2>
-                            <img src={sombrero1} className="sombrero" />
-                        </div>
+                        <CardArt
+                            foto={sombrero1}
+                            titulo={'Sombrero Tradicional'}
+                            precio={'200.000 $'}
+                        />
                     </Col>
                     <Col xl={4} md={6} className="d-flex align-center justify-content-center">
-                        <div className="d-block text-center">
-                            <h2>Sombrero Engomado</h2>
-                            <img src={sombrero2} className="sombrero" />
-                        </div>
+                        <CardArt
+                            foto={sombrero2}
+                            titulo={'Sombrero Engomao'}
+                            precio={'250.000 $'} />
                     </Col>
                     <Col xl={4} md={6} className="d-flex align-center justify-content-center">
-                        <div className="d-block text-center">
-                            <h2>Sombrero Color</h2>
-                            <img src={sombrero3} className="sombrero" />
-                        </div>
+                        <CardArt
+                            foto={sombrero3}
+                            titulo={'Sombrero de color'}
+                            precio={'200.000 $'} />
                     </Col>
                 </Row>
             }
-
         </div>
 
     )

@@ -1,9 +1,15 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Lato', sans-serif;
+    position: relative;
+    padding-bottom: 4rem;
+    min-height: 100vh;
 }
-:root {
-    --titles: 'Lato', sans-serif;
+
+footer {
+    position: absolute;
+    bottom: 0;
 }

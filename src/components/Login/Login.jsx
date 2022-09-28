@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 import { loginUser } from "../../api/users/users";
 import { getItem } from "../../lib/sessionStorage";
-/* import { GoogleLogin } from "react-google-login"; */
 
 export const Login = () => {
   const [formState, setFormState] = useState({
@@ -15,26 +14,21 @@ export const Login = () => {
     password: "",
   });
 
-  //   const resGoogle = (res) => {
-  //     console.log(res);
-  //     console.log(res.profileObj);
-  //   };
-
   const handleLogin = async (e) => {
     e.preventDefault();
 
     loginUser(formState.email, formState.password);
     if (getItem("x-jwt")) {
-      window.location.href = "/";
+      window.location.pathname="/"
     }
   };
 
   return (
     <div className="container">
-      <h1 className="style-title">"Login"</h1>
+      <h1 className="style-title">Iniciar Sesión</h1>
       {
-        <Row className="w-100">
-          <Col xl={8}>
+        <Row className="w-100 ">
+          <Col xl={12} className="d-flex justify-content-center align-item-center">
             <div className="d-grid">
               <label>
                 <b>Correo:</b>
@@ -67,35 +61,23 @@ export const Login = () => {
                 placeholder="Tu contraseña"
               />
 
-              <div>
+              <div className="div-buttons">
                 <button
-                  className="button-login button-login-animation mt-3 mb-3"
+                  className="button-login-left button-login-animation mt-3 mb-3"
                   onClick={handleLogin}
                 >
                   Iniciar Sesión
                 </button>
 
-                <Link to="/Register">
-                  <button className="button-login button-login-animation mt-3 mb-3">
-                    Registrarse
-                  </button>
-                </Link>
+                
+                <button className="button-login-right button-login-animation mt-3 mb-3">
+                    <Link className="link-register" to="/Register">
+                      Registrarse
+                    </Link>
+                </button>
+                
               </div>
             </div>
-          </Col>
-
-          <Col xl={4}>
-            <h1 className="mb-4">
-              <b>También con: </b>
-            </h1>
-            {/* <GoogleLogin
-                            clientId="g_id_onload"
-                            data-client_id={process.env.GOOGLE_CLIENT_ID}
-                            buttonText="Iniciar Sesión con Google"
-                            onSuccess={resGoogle}
-                            onFailure={resGoogle}
-                            cookiePolicy={"single_host_origin"}
-                        /> */}
           </Col>
         </Row>
       }
