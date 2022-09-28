@@ -7,20 +7,33 @@ a:link, a:visited {
     text-align: center;
 }
 
-
-.footerI {
-    display: inline-flex;
-    justify-content: space-between;
-}
-
-.logoFooter {
+.footer-img {
     width: 4rem;
 }
 
-.logos {
+.footer-menu {
     display: inline-flex;
     justify-content: space-between;
-    width: 25px;
-    margin-bottom: 10px;
 }
 
+.footer-menu__item {
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer-menu__item:hover, .footer-menu__item:focus {
+    text-decoration: none;
+    color: #949494;
+}
+
+.social-media-logo {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 1.2rem;
+    margin-bottom: 10px;
+    margin-left: 6px;
+}
+
+.social-media-logo:hover {
+    filter: grayscale(100%);
+}

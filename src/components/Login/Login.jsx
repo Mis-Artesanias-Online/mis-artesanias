@@ -1,4 +1,3 @@
-import axios from "axios";
 import {useEffect, useState} from "react";
 import "../../styles/Login.css";
 import Row from "react-bootstrap/Row";
