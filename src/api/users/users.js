@@ -42,13 +42,15 @@ export const createUser = async (name, email, password) => {
     data,
   };
   axios(config)
-    .then(function (response) {
-      console.log(response.data);
-      return response.data;
+    .then(async function (response) {
+      const { data } = response;
+      console.log(data);
+      return data;
     })
-    .catch(function (error) {
-      const errorMessage = JSON.parse(error.request.response);
-      return new Error(errorMessage.errors);
+    .catch(async function (error) {
+      const errorMessage = await JSON.parse(error.request.response);
+      console.log(errorMessage);
+      return errorMessage;
     });
 };
 
@@ -124,11 +126,13 @@ export const loginUser = (email, password) => {
       // });
       saveItem("x-jwt", response.data.token);
       saveItem("name", response.data.user.name);
-      window.location.pathname = "/"
-      return ({
+      window.location.pathname = "/";
+      return {
         name: response.data.user.name,
-        token: response.data.token
-      }); // Thats means: User logged in and token saved on sessionstorage
+        token: response.data.token,
+        id: response.data.user._id,
+        role: response.data.user.role,
+      }; // Thats means: User logged in and token saved on sessionstorage
     })
     .catch(function (error) {
       console.log(error.request.response);
