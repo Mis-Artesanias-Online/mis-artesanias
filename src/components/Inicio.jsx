@@ -1,13 +1,13 @@
 import { BannerArtesanias } from "../components/Inicio/BannerArtesanias";
 import { NuestrosProductos } from "../components/Inicio/NuestrosProductos";
-import { BeneficiosMarca } from "../components/Inicio/BeneficiosMarca";
+import { BrandBenefits } from "./Inicio/BrandBenefits";
 
 export const Inicio = () => {
     return (
         <>
             <BannerArtesanias />
             <NuestrosProductos />
-            <BeneficiosMarca />
+            <BrandBenefits />
         </>
     )
 }
