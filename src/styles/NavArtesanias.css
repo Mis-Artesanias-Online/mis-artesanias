@@ -21,12 +21,12 @@ ion-icon{
     color: #000;
 }
 
-.link-icon__user {
+.link-icon__user > p {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #000;
-    
+    margin: 0;
 }
 
 .nav-container > a {

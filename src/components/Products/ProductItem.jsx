@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 export const ProductItem = () => {
     return (
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src="https://res.cloudinary.com/dsd61ioc7/image/upload/v1664416336/mis-artesanias/product/gmhbtsq0x39kiekehqly.jpg" />
             <Card.Body>
                 <Card.Title>Card Title</Card.Title>
                 <Card.Text>

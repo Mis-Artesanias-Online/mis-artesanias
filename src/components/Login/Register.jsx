@@ -17,7 +17,10 @@ export const Register = () => {
     const handleRegister = async (e) => {
         e.preventDefault()
 
-        await createUser(formState.name, formState.email, formState.password)
+        const userNew = await createUser(formState.name, formState.email, formState.password);
+        console.error(error)
+            
+
     }
 
     return (
@@ -68,7 +71,6 @@ export const Register = () => {
                             <button
                                 className="button-login button-login-animation mt-3 mb-3"
                                 onClick={handleRegister}>Registrarse
-                                
                             </button>
                         </div>
 

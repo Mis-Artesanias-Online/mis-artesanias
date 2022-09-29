@@ -86,12 +86,11 @@ export const Login = () => {
                                         {isLoading ? "Enviando..." : "Login"}
                                     </button>
 
-                                    <button className="button-login-right button-login-animation mt-3 mb-3">
-                                        <Link className="link-register" to="/Register">
-                                            Registrarse
-                                        </Link>
-                                    </button>
-
+                                    <Link className="link-register" to="/Register">
+                                        <button className="button-login-right button-login-animation mt-3 mb-3">
+                                                Registrarse
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </Col>
@@ -104,8 +103,8 @@ export const Login = () => {
     const logoutForm = () => {
         return (
             <>
-                <div>
-                    <h1>Log Out</h1>
+                <div className="d-grid justify-content-center">
+                    <h1>Cerrar Sesion</h1>
                     <button onClick={handleLogout}>Log-out</button>
                 </div>
             </>

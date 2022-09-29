@@ -47,7 +47,8 @@ export const createUser = async (name, email, password) => {
       return response.data;
     })
     .catch(function (error) {
-      console.log(error);
+      const errorMessage = JSON.parse(error.request.response);
+      return new Error(errorMessage.errors);
     });
 };
 

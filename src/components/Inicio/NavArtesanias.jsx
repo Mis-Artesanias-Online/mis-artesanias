@@ -24,9 +24,11 @@ export const NavArtesanias = () => {
 
         <div className="d-flex justify-content-center align-item-center">
 
-          <Link className="link-icon__user" to="/Login">
+          <Link className="link-icon__user d-flex" to="/Login">
             <ion-icon name="person-outline"></ion-icon>
-            {name}
+            {
+              name && <p>Bienvenido: { name }</p>
+            }
           </Link>
 
           <ion-icon name="cart-outline"></ion-icon>
