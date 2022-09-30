@@ -1,7 +1,5 @@
 import axios from "axios";
 
-import { saveItem, getItem } from "../../lib/sessionStorage";
-
 const VITE_API_ENDPOINT = import.meta.env.VITE_API_ENDPOINT;
 
 // VITE_API_KEY => REQUIRED
@@ -16,10 +14,9 @@ export const getAllProducts = async () => {
 
   axios(config)
     .then(function (response) {
-      console.log(response.data);
-      return response.data;
+      return console.log(response.data);
     })
     .catch(function (error) {
-      console.log(error);
+      console.error(error);
     });
 };
