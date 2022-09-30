@@ -18,45 +18,26 @@ export const ProductItem = () => {
     setLoading(false);
   };
 
-  const productsCards = () => {
-    return products.map((product) => {
-      return (
-        <Card key={product._id} className="mb-4">
-          <Card.Img variant="top" src={product.image} />
-          <Card.Body>
-            <Card.Title>{product.name}</Card.Title>
-            <Card.Text>{product.description}</Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-      );
-    });
-  };
-
   useEffect(() => {
     setAllProducts();
   }, []);
 
   return (
     <>
-      {products.length > 0 ? (
-        productsCards()
-      ) : (
-        <h1 className="text-center">No hay productos</h1>
-      )}
+      {
+        products.map((product) => {
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" src={product.image} />
+            <Card.Body>
+              <Card.Title>{product.name}</Card.Title>
+              <Card.Text>{product.description}</Card.Text>
+              <Button variant="primary">Comprar</Button>
+            </Card.Body>
+          </Card>;
+        })
+      }
     </>
   );
 };
 
-// {
-//   products.map((product) => {
-//     <Card style={{ width: "18rem" }}>
-//       <Card.Img variant="top" src={product.image} />
-//       <Card.Body>
-//         <Card.Title>{product.name}</Card.Title>
-//         <Card.Text>{product.description}</Card.Text>
-//         <Button variant="primary">Comprar</Button>
-//       </Card.Body>
-//     </Card>;
-//   });
-// }
+
