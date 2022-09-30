@@ -1,9 +1,8 @@
-import axios from "axios";
 
 const VITE_API_ENDPOINT = import.meta.env.VITE_API_ENDPOINT;
 
 // VITE_API_KEY => REQUIRED
-export const getAllProducts = async () => {
+const getAllProducts = async () => {
   let config = {
     method: "get",
     url: `${VITE_API_ENDPOINT}/products`,
@@ -12,11 +11,15 @@ export const getAllProducts = async () => {
     },
   };
 
-  axios(config)
+  await axios(config)
     .then(function (response) {
-      return console.log(response.data);
+      const { products } = response.data;
+      // console.log(products);
+      return products;
     })
     .catch(function (error) {
       console.error(error);
     });
 };
+
+export { getAllProducts };
