@@ -3,7 +3,7 @@ import axios from "axios";
 
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-// import { getAllProducts } from "../../api/products/products";
+import { getAllProducts } from "../../api/products/products";
 
 const VITE_API_ENDPOINT = import.meta.env.VITE_API_ENDPOINT;
 
@@ -11,26 +11,11 @@ export const ProductItem = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // VITE_API_KEY => REQUIRED
-  const getAllProducts = async () => {
-    let config = {
-      method: "get",
-      url: `${VITE_API_ENDPOINT}/products`,
-      headers: {
-        "x-api-key": import.meta.env.VITE_API_KEY,
-      },
-    };
-
-    await axios(config)
-      .then(function (response) {
-        const { products } = response.data;
-        // console.log(products);
-        setProducts(products);
-        return products;
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
+  const setAllProducts = async () => {
+    setLoading(true);
+    const products = await getAllProducts();
+    setProducts(products);
+    setLoading(false);
   };
 
   const productsCards = () => {
@@ -49,9 +34,7 @@ export const ProductItem = () => {
   };
 
   useEffect(() => {
-    setLoading(true);
-    getAllProducts();
-    setLoading(false);
+    setAllProducts();
   }, []);
 
   return (
