@@ -23,7 +23,7 @@ const getAllProducts = async () => {
       console.error(error);
     });
 
-  console.log(res);
+  // console.log(res);
   return res;
 };
 

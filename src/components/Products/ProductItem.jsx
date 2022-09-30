@@ -21,8 +21,8 @@ export const ProductItem = () => {
 
   return (
     <>
-      {
-        products.map((product) => {
+      {products.map((product) => {
+        return (
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src={product.image} />
             <Card.Body>
@@ -30,11 +30,9 @@ export const ProductItem = () => {
               <Card.Text>{product.description}</Card.Text>
               <Button variant="primary">Comprar</Button>
             </Card.Body>
-          </Card>;
-        })
-      }
+          </Card>
+        );
+      })}
     </>
   );
 };
-
-

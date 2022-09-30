@@ -103,7 +103,7 @@ export const deleteUser = async (userID) => {
 };
 
 // VITE_API_KEY => REQUIRED
-export const loginUser = (email, password) => {
+export const loginUser = async (email, password) => {
   const data = {
     email,
     password,
@@ -118,7 +118,7 @@ export const loginUser = (email, password) => {
     data: data,
   };
 
-  axios(config)
+  return await axios(config)
     .then(function (response) {
       // console.log({
       //   name: response.data.user.name,

@@ -22,8 +22,8 @@ export const Login = () => {
     e.preventDefault();
 
     setIsLoading(true);
-    await loginUser(formState.email, formState.password);
-    setUser.setUserId()
+    const user = await loginUser(formState.email, formState.password);
+    setUser(user);
     setIsLoading(false);
   };
 
@@ -35,7 +35,7 @@ export const Login = () => {
   useEffect(() => {
     if (user) {
       setIsLogin(true);
-      console.log(user);
+      // console.log(user);
     }
   }, []);
 
@@ -90,7 +90,7 @@ export const Login = () => {
                     {isLoading ? "Enviando..." : "Login"}
                   </button>
 
-                  <Link className="link-register" to="/Register">
+                  <Link className="link-register" to="/register">
                     <button className="button-login-right button-login-animation mt-3 mb-3">
                       Registrarse
                     </button>

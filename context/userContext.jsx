@@ -13,22 +13,15 @@ export const UserProvider = ({ children }) => {
     role: "",
   });
 
+  console.log(user);
+
   const getUser = () => {
     const user = getItem("name");
     const token = getItem("x-jwt");
     if (user) {
-      setUser(user.name);
-      setUser(user.token);
+      setUser({ user: user, token: token });
     }
     return user;
-  };
-
-  const setUserId = (id) => {
-    setUser(id);
-  };
-
-  const setUserRole = (role) => {
-    setUser(role);
   };
 
   useEffect(() => {
